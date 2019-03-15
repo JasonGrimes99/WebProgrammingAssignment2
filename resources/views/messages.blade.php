@@ -68,53 +68,54 @@
 
             </div>
         </nav>
-        <div class="container-fluid" id="about-user">
+        <div class="container-fluid" id="messages">
             <div class="row">
-                <div class="col-sm-3">
-                    <h1>Profile Picture goes here</h1>
-                </div>
-                <div class="col-sm-9">
-                    <div class="row">
-                        <div class="col">
-                            <p>Name</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Date of Birth</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Role</p>
-                        </div>
-                    </div>
+                <div class="col">
+                    <h1>Messages</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h1>User Summary</h1>
+                    <h2>Message Name</h2>
+                </div>
+                <div class="col">
+                    <h2>Date and Time Received</h2>
+                </div>
+                <div class="col">
+                    <h2>Sender</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h2>How Many Meetings:</h2>
+                    <a href="#">First Message</a>
                 </div>
                 <div class="col">
-                    <h2>2</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>How Many Messages:</h2>
+                    <p>Date and Time received</p>
                 </div>
                 <div class="col">
-                    <h2>2</h2>
+                    <p>Sender</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <button href="preferences.html" class="btn btn-primary btn-sm float-right">User Settings</button>
+                    <a href="#">Second Message</a>
+                </div>
+                <div class="col">
+                    <p>Date and Time received</p>
+                </div>
+                <div class="col">
+                    <p>Sender</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="#">Third Message</a>
+                </div>
+                <div class="col">
+                    <p>Date and Time received</p>
+                </div>
+                <div class="col">
+                    <p>Sender</p>
                 </div>
             </div>
         </div>
