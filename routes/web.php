@@ -12,5 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/main', function () {
+    return view('main');
+});
+
+Route::get('/meetings', function () {
+    return view('meetings');
+});
+
+Route::get('/messages', function () {
+    return view('messages');
+});
+
+Route::get('/register', function () {
+    return view('register');
 });
