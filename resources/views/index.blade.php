@@ -33,7 +33,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col"><button type="reset" class="col-6 btn btn-secondary btn-sm float-left">Reset</button></div>
-                            <div class="col"><button href="main.html" class="col-6 btn btn-primary btn-sm float-right">Submit</button></div>
+                            <div class="col"><button class="col-6 btn btn-primary btn-sm float-right" type="submit">Submit</button></div>
                         </div>
                     </div>
                 </div>
