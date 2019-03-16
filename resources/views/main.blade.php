@@ -6,30 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../bootstrap/theme.css">
-
-
     <title>Main Page</title>
 </head>
 <body>
 
 <div class="body-container">
+
     <nav id="side-navbar">
         <div class="side-navbar-header">
-            <h1>Shout</h1>
+            <a href="/shout"><img src="media/shout_logo.png" width="200px" height="80px"></a>
         </div>
 
         <ul class="list-unstyled components">
             <li class="active">
-                <a href="#">Home</a>
+                <a href="/shout">Home</a>
             </li>
             <li>
-                <a href="#">Profile</a>
+                <a href="profile">Profile</a>
             </li>
             <li>
-                <a href="messages.html">Messages</a>
+                <a href="messages">Messages</a>
             </li>
             <li>
-                <a href="meetings.html">Meetings</a>
+                <a href="meetings">Meetings</a>
             </li>
         </ul>
     </nav>
@@ -37,13 +36,8 @@
 
     <div id="main-items">
 
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-
-
-
-
 
                 <button type="button" id="side-navbar-collapse" class="btn btn-info">
                     <i class="fas fa-align-left"></i>
@@ -64,10 +58,9 @@
                         </li>
                     </ul>
                 </div>
-
-
             </div>
         </nav>
+
         <div class="container-fluid" id="recent-messages">
             <div class="row">
                 <div class="col">
@@ -119,6 +112,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container-fluid" id="recent-meetings">
             <div class="row">
                 <div class="col">
@@ -158,6 +152,7 @@
                     <p>Who With</p>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col">
                     <a href="#">Third Meeting</a>
@@ -171,6 +166,7 @@
             </div>
         </div>
     </div>
+
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
