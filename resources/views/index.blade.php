@@ -13,6 +13,9 @@
 
 <div class="container-fluid h-100">
     <div class="row justify-content-center align-items-center">
+        <a href="/shout"><img src="media/shout_logo.png" width="200px" height="80px"></a>
+    </div>
+    <div class="row justify-content-center align-items-center">
         <h1>Please Login</h1>
     </div>
     <div class="row justify-content-center align-items-center h-100">
