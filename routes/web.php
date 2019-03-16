@@ -33,4 +33,4 @@ Route::get('/messages', function () {
 
 Route::get('/register', function () {
     return view('register');
-});
+})->name('register');
