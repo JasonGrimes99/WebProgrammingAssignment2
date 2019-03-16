@@ -18,7 +18,7 @@
     <hr/>
     <div class="row justify-content-center align-items-center h-100">
         <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <form action="">
+            <form action=""> <!-- log in php script in action-->
                 <div class="form-group">
                     <p>User Name:</p>
                     <input type="text" class="form-control" />
@@ -50,13 +50,14 @@
                 <div class="form-group">
                     <div class="container">
                         <div class="row">
-                            <div class="col"><button class="col-6 btn btn-secondary btn-sm float-left">Reset</button></div>
+                            <div class="col"><button class="col-6 btn btn-secondary btn-sm float-left" type="reset">Reset</button></div>
                             <div class="col"><button href="main.html" class="col-6 btn btn-primary btn-sm float-right">Submit</button></div>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col"><button button onclick="window.location.href='./index.html'" class="btn btn-primary">Go Back</button></div>
+                    <!-- <div class="col"><button button onclick="window.location.href='./index.html'" class="btn btn-primary">Go Back</button></div> -->
+                    <div class="col"><a class="btn btn-primary" href="/shout/">Go Back</a></div>
                 </div>
 
             </form>

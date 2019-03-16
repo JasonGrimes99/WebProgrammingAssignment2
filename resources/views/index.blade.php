@@ -15,10 +15,9 @@
     <div class="row justify-content-center align-items-center">
         <h1>Please Login</h1>
     </div>
-    <hr/>
     <div class="row justify-content-center align-items-center h-100">
         <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <form action="">
+            <form action=""> <!-- log in php script in action-->
                 <div class="form-group">
                     <p>User Name:</p>
                     <input type="text" class="form-control" />
@@ -30,13 +29,14 @@
                 <div class="form-group">
                     <div class="container">
                         <div class="row">
-                            <div class="col"><button class="col-6 btn btn-secondary btn-sm float-left">Reset</button></div>
+                            <div class="col"><button type="reset" class="col-6 btn btn-secondary btn-sm float-left">Reset</button></div>
                             <div class="col"><button href="main.html" class="col-6 btn btn-primary btn-sm float-right">Submit</button></div>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col"><button href="register.html" class="btn btn-primary">Register</button></div>
+                    <!-- <div class="col"><button class="btn btn-primary" href="../register" >Register</button></div> -->
+                    <div class="col"><a class="btn btn-primary" href="register">Register</a></div>
                 </div>
 
             </form>
