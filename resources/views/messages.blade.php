@@ -23,7 +23,7 @@ function messageBuilder($name, $date, $content){
 ";
 }
 ?>
-        <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>

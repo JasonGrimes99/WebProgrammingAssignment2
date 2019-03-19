@@ -1,5 +1,6 @@
 <?php
 echo '<nav id="side-navbar">
+
         <div class="side-navbar-header">
             <a href="/shout"><img src="media/shout_logo.png" width="200px" height="80px"></a>
         </div>
@@ -49,3 +50,4 @@ echo '<nav id="side-navbar">
         </nav>
         </div>';
 ?>
+
