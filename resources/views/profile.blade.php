@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="../bootstrap/theme.css">
     
 
     <title>Main Page</title>
@@ -13,61 +13,14 @@
 <body>
 
     <div class="body-container">
-        <nav id="side-navbar">
-            <div class="side-navbar-header">
-                <h1>Shout</h1>
-            </div>
-
-            <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Profile</a>
-                </li>
-                <li>
-                    <a href="messages.html">Messages</a>
-                </li>
-                <li>
-                    <a href="meetings.html">Meetings</a>
-                </li>
-            </ul>
-        </nav>
+        <?php
+            require 'nav.blade.php';
+            echo $navbar;
+        ?>
     
         
         <div id="main-items">
-                
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-
-
-
-                    
-            <button type="button" id="side-navbar-collapse" class="btn btn-info">
-                <i class="fas fa-align-left"></i>
-                <span>Toggle Sidebar</span>
-            </button>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                              <form class="form-inline">
-                                  <input class="form-control mr-4" type="search" placeholder="Search" aria-label="Search">
-                                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Logout</a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div>
-            </nav>
             <div class="container-fluid" id="about-user">
                 <div class="row">
                     <div class="col-sm-3">
