@@ -40,6 +40,7 @@
                 <div class="form-group">
                     <!-- <div class="col"><button class="btn btn-primary" href="../register" >Register</button></div> -->
                     <div class="col"><a class="btn btn-primary" href="register">Register</a></div>
+                    <p>something</p>
                 </div>
 
             </form>

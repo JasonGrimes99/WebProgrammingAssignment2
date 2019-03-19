@@ -12,10 +12,8 @@
 
 <div class="body-container">
 
-    <?php
-            require 'nav.blade.php';
-            echo $navbar;
-        ?>
+    @include('nav')
+
 
     <div id="main-items">
 

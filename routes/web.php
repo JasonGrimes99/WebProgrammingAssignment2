@@ -11,26 +11,32 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('', function () {
     return view('index');
 });
 
-Route::get('/profile', function () {
+Route::get('profile', function () {
     return view('profile');
 });
 
-Route::get('/main', function () {
+Route::get('main', function () {
     return view('main');
 });
 
-Route::get('/meetings', function () {
+Route::get('meetings', function () {
     return view('meetings');
 });
 
-Route::get('/messages', function () {
+Route::get('messages', function () {
     return view('messages');
 });
 
-Route::get('/register', function () {
+Route::get('register', function () {
     return view('register');
-})->name('register');
+});
+
+Route::get('test', function () {
+    return view('test');
+});
+
+Route::get('test','usersController@index'); //the string to put in to the url, and which controller to go with that view
