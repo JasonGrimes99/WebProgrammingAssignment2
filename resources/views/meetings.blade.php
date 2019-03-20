@@ -1,3 +1,28 @@
+<?php
+
+$numOfMeetings = 10;
+
+function meetingBuilder($name, $date, $content){
+
+    echo "
+<div class='row'>
+
+    <div class='col'>
+        <a href='#'>$name</a>
+    </div>
+
+    <div class='col'>
+        <p>$content</p>
+    </div>
+
+    <div class='col'>
+        <p>$date</p>
+    </div>
+
+</div>
+";
+}
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -34,39 +59,12 @@
                     <h2>Who With</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <a href="#">First Meeting</a>
-                </div>
-                <div class="col">
-                    <p>Date and Time</p>
-                </div>
-                <div class="col">
-                    <p>Who With</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="#">Second Meeting</a>
-                </div>
-                <div class="col">
-                    <p>Date and Time</p>
-                </div>
-                <div class="col">
-                    <p>Who With</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="#">Third Meeting</a>
-                </div>
-                <div class="col">
-                    <p>Date and Time</p>
-                </div>
-                <div class="col">
-                    <p>Who With</p>
-                </div>
-            </div>
+        <div>
+        <?php
+        for($i=0; $i <= $numOfMeetings; $i++){
+            meetingBuilder("STUDENT_NAME", "27/10/2016 15:00:00", "Meeting at $i:00, See STUDENT_PROFILE");}
+        ?>
+        </div>
         </div>
     </div>
 </div>
