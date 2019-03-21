@@ -1,6 +1,9 @@
 <?php
 
-$numOfMeetings = 10;
+$numOfMeetings = 2;
+
+$students = array();
+$counter = 0;
 
 function meetingBuilder($name, $date, $content){
 
@@ -41,7 +44,6 @@ function meetingBuilder($name, $date, $content){
 
     <div id="main-items">
 
-
         <div class="container-fluid" id="meetings">
             <div class="row">
                 <div class="col">
@@ -60,9 +62,14 @@ function meetingBuilder($name, $date, $content){
                 </div>
             </div>
         <div>
+            @foreach($studentName as $student)
+                <?php $students[$counter] = $student->First_Name; $counter++  ?>
+            <!--    <p>{{$student->First_Name}}</p> -->
+            @endforeach
         <?php
         for($i=0; $i <= $numOfMeetings; $i++){
-            meetingBuilder("STUDENT_NAME", "27/10/2016 15:00:00", "Meeting at $i:00, See STUDENT_PROFILE");}
+
+            meetingBuilder($students[$i], "27/10/2016 15:00:00", "Meeting at $i:00, See STUDENT_PROFILE");}
         ?>
         </div>
         </div>

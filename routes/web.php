@@ -40,3 +40,5 @@ Route::get('test', function () {
 });
 
 Route::get('test','usersController@index'); //the string to put in to the url, and which controller to go with that view
+
+Route::get('meetings','dbController@NameGrabber'); // Getting nameGrabber into meetings view
