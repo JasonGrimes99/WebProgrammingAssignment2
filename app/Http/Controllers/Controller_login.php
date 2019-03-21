@@ -9,52 +9,29 @@ use DB;
 
 class Controller_login extends Controller
 {
-    /*
-    function index(){
-        return view('index');
-    }
-
-    function checkLogin(Request $request){
-        $this->validate($request, [
-            'username' => 'required|username',
-            'password' => 'required|min:3'
-        ]);
-
-        $user_data = array(
-            'username' => $request->post('input_username'),
-            'password' => $request->post('input_password')
-        );
-
-        if(Auth::attempt($user_data)){
-            return redirect('profile');
-        } else {
-            return redirect('messages');
-        }
-    }
-
-    function successLogin(){
-        return view('main');
-    }
-
-    function logout(){
-        Auth::logout();
-        return redirect('messages');
-    }
-    */
-
     function checkLogin(Request $request){
         $user_input_email = ($request->input('input_email'));
         $user_input_password = ($request->input('input_password'));
 
-        $student_email = DB::table('student_table')->where('Email', $user_input_email)->value('Email')->where('Password', $user_input_password)->value('Password');
-        $lecturer_email = DB::table('lecturer_table')->where('Email', $user_input_email)->value('Email');
-        $admin_email = DB::table('admin_table')->where('Email', $user_input_email)->value('Email');
+        $student_email = DB::table('student_table')->where('Email', $user_input_email)->where('Password', $user_input_password)->value('Student_ID');
+        $lecturer_email = DB::table('lecturer_table')->where('Email', $user_input_email)->where('Password', $user_input_password)->value('Lecturer_ID');
+        $admin_email = DB::table('admin_table')->where('Email', $user_input_email)->where('Password', $user_input_password)->value('Admin_ID');
 
-        if (isset($student_email) || isset($lecturer_email) || isset($admin_email)){
-            echo "asd";
-        } else {
-            echo "aaaaaaaa";
+        echo $student_email;
+        echo $lecturer_email;
+        echo $admin_email;
+
+        if(($student_email || $lecturer_email || $admin_email) > 0){ // login in (create sessions here)
+            echo "yes";
+
+
+
+
+        } else { // don't log in, redirect and display error
+            $error_message = "Issue with login, check email or password";
+            return view('index', ['error_message' => $error_message]);
         }
+
 
     }
 }
