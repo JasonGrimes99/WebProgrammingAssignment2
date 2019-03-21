@@ -39,4 +39,12 @@ Route::get('test', function () {
     return view('test');
 });
 
-Route::get('test','usersController@index'); //the string to put in to the url, and which controller to go with that view
+// Route::get('test','usersController@index'); //the string to put in to the url, and which controller to go with that view
+
+
+//Route::get('', 'Controller_login@index');
+//Route::post('index', 'Controller_login@checkLogin');
+
+Route::post('test', 'Controller_login@checkText');
+
+Route::post('index', 'Controller_login@checkText');
