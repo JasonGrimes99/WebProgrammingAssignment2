@@ -47,4 +47,4 @@ Route::get('test', function () {
 
 Route::post('test', 'Controller_login@checkText');
 
-Route::post('index', 'Controller_login@checkText');
+Route::post('index', 'Controller_login@checkLogin');
