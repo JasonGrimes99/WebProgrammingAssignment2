@@ -17,14 +17,15 @@ class Controller_login extends Controller
         $lecturer_email = DB::table('lecturer_table')->where('Email', $user_input_email)->where('Password', $user_input_password)->value('Lecturer_ID');
         $admin_email = DB::table('admin_table')->where('Email', $user_input_email)->where('Password', $user_input_password)->value('Admin_ID');
 
-        echo $student_email;
-        echo $lecturer_email;
-        echo $admin_email;
+        //echo $student_email;
+        //echo $lecturer_email;
+        //echo $admin_email;
 
         if(($student_email || $lecturer_email || $admin_email) > 0){ // login in (create sessions here)
-            echo "yes";
-
-
+            //echo "yes";
+            $request->session()->put('user', $user_input_email);
+            //echo $request->session()->get('user');
+            return redirect('main')->with($request->session()->get('user'));
 
 
         } else { // don't log in, redirect and display error

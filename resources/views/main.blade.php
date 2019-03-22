@@ -12,6 +12,11 @@
 
 <div class="body-container">
 
+    <?php
+        $user_value = session()->get('user');
+        echo $user_value;
+    ?>
+
     @include('nav')
 
 
