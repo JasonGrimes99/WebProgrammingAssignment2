@@ -39,8 +39,6 @@ function messageBuilder($name, $date, $content){
 
     @include('nav')
 
-    <div id="main-items">
-
 
         <div class="container-fluid" id="messages">
             <div class="row">

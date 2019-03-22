@@ -42,7 +42,7 @@ function meetingBuilder($name, $date, $content){
 
     @include('nav')
 
-    <div id="main-items">
+
 
         <div class="container-fluid" id="meetings">
             <div class="row">

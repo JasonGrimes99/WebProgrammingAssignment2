@@ -15,7 +15,7 @@
     @include('nav')
 
 
-    <div id="main-items">
+
 
 
         <div class="container-fluid" id="recent-messages">
