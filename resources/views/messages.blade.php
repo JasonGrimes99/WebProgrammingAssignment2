@@ -1,4 +1,7 @@
 <?php
+if(empty(session('user'))){
+    return redirect('');
+}
 
 $numOfMessages = 10;
 
@@ -38,8 +41,6 @@ function messageBuilder($name, $date, $content){
 <div class="body-container">
 
     @include('nav')
-
-    <div id="main-items">
 
 
         <div class="container-fluid" id="messages">
