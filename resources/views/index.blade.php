@@ -22,7 +22,7 @@
         <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <form action=""> <!-- log in php script in action-->
                 <div class="form-group">
-                    <p>User Name:</p>
+                    <p>Email:</p>
                     <input type="text" class="form-control" />
                 </div>
                 <div class="form-group">
@@ -38,9 +38,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <!-- <div class="col"><button class="btn btn-primary" href="../register" >Register</button></div> -->
                     <div class="col"><a class="btn btn-primary" href="register">Register</a></div>
-                    <p>something</p>
                 </div>
 
             </form>
