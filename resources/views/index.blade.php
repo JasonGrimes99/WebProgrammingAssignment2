@@ -1,3 +1,9 @@
+<?php
+if(empty(session('user'))){
+} else {
+    redirect('main');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +45,6 @@
                 <div class="form-group">
                     <div class="col"><a class="btn btn-primary" href="register">Register</a></div>
                 </div>
-
             </form>
         </div>
     </div>
