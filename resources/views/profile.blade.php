@@ -19,19 +19,15 @@ if(empty(session('user'))){
 
     @include('nav')
 
-    <div id="main-items">
 
-        <div class="container-fluid" id="about-user">
+
+        <div class="container" id="about-user">
             <div class="row">
                 <div class="col-sm-3">
                     <h1>Profile Picture goes here</h1>
                 </div>
                 <div class="col-sm-9">
-                    <div class="row">
-                        <div class="col">
-                            <p>Name</p>
-                        </div>
-                    </div>
+                    
                     <div class="col-sm-9">
                         <div class="row">
                             <div class="col">
@@ -71,11 +67,7 @@ if(empty(session('user'))){
                         <h2>2</h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <a href="#" class="btn btn-primary btn-sm" onclick="TogglePreferences('prefs');return false;">User Settings</a>
-                    </div>
-                </div>
+                
             </div>
             <div class="row">
                 <div class="col">

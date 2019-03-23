@@ -24,7 +24,7 @@ if(empty(session('user'))){
 
     @include('nav')
 
-    <div id="main-items">
+
 
 
         <div class="container-fluid" id="recent-messages">

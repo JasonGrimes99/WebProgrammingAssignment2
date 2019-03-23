@@ -48,6 +48,6 @@ echo '<nav id="side-navbar">
                 </div>
             </div>
         </nav>
-        </div>';
+        ';
 ?>
 

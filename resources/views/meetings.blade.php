@@ -1,6 +1,31 @@
 <?php
 if(empty(session('user'))){
     return redirect('');
+
+$numOfMeetings = 2;
+
+$students = array();
+$counter = 0;
+
+function meetingBuilder($name, $date, $content){
+
+    echo "
+<div class='row'>
+
+    <div class='col'>
+        <a href='#'>$name</a>
+    </div>
+
+    <div class='col'>
+        <p>$content</p>
+    </div>
+
+    <div class='col'>
+        <p>$date</p>
+    </div>
+
+</div>
+";
 }
 ?>
 <!DOCTYPE html>
@@ -19,7 +44,6 @@ if(empty(session('user'))){
 
     @include('nav')
 
-    <div id="main-items">
 
 
         <div class="container-fluid" id="meetings">
@@ -39,39 +63,17 @@ if(empty(session('user'))){
                     <h2>Who With</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <a href="#">First Meeting</a>
-                </div>
-                <div class="col">
-                    <p>Date and Time</p>
-                </div>
-                <div class="col">
-                    <p>Who With</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="#">Second Meeting</a>
-                </div>
-                <div class="col">
-                    <p>Date and Time</p>
-                </div>
-                <div class="col">
-                    <p>Who With</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="#">Third Meeting</a>
-                </div>
-                <div class="col">
-                    <p>Date and Time</p>
-                </div>
-                <div class="col">
-                    <p>Who With</p>
-                </div>
-            </div>
+        <div>
+            @foreach($studentName as $student)
+                <?php $students[$counter] = $student->First_Name; $counter++  ?>
+            <!--    <p>{{$student->First_Name}}</p> -->
+            @endforeach
+        <?php
+        for($i=0; $i <= $numOfMeetings; $i++){
+
+            meetingBuilder($students[$i], "27/10/2016 15:00:00", "Meeting at $i:00, See STUDENT_PROFILE");}
+        ?>
+        </div>
         </div>
     </div>
 </div>

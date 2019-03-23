@@ -92,6 +92,9 @@ ul ul a {
     background: #777;
 }
 
+#side-navbar-collapse {
+    display:none;
+}
 
 #main-items {
     width: 100%;
@@ -110,4 +113,7 @@ ul ul a {
     #side-navbarCollapse span {
         display: none;
     }
+    #side-navbar-collapse {
+    display:block;
+}
 }
