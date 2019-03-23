@@ -1,4 +1,7 @@
 <?php
+if(empty(session('user'))){
+    return redirect('');
+}
 
 $numOfMessages = 10;
 

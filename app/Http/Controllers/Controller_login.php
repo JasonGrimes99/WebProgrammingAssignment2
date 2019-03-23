@@ -17,22 +17,18 @@ class Controller_login extends Controller
         $lecturer_email = DB::table('lecturer_table')->where('Email', $user_input_email)->where('Password', $user_input_password)->value('Lecturer_ID');
         $admin_email = DB::table('admin_table')->where('Email', $user_input_email)->where('Password', $user_input_password)->value('Admin_ID');
 
-        //echo $student_email;
-        //echo $lecturer_email;
-        //echo $admin_email;
-
         if(($student_email || $lecturer_email || $admin_email) > 0){ // login in (create sessions here)
-            //echo "yes";
-            $request->session()->put('user', $user_input_email);
-            //echo $request->session()->get('user');
-            return redirect('main')->with($request->session()->get('user'));
-
+            $request->session()->put('user', $user_input_email); //setting session value 'user' to user input email
+            return redirect('main')->with($request->session()->get('user')); //redirect to the page with the session data
 
         } else { // don't log in, redirect and display error
             $error_message = "Issue with login, check email or password";
-            return view('index', ['error_message' => $error_message]);
+            return redirect('')->with('error_message', [$error_message]); // check if this works?
         }
+    }
 
-
+    function logout(){
+        session()->flush();
+        return redirect('');
     }
 }
