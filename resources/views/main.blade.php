@@ -1,5 +1,9 @@
+<?php
+if(empty(session('user'))){
+    return redirect('');
+}
+?>
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -12,8 +16,13 @@
 
 <div class="body-container">
 
-    @include('nav')
+    <a href="{{action('Controller_login@logout')}}">logout</a>
 
+    <?php
+        echo session('user');
+    ?>
+
+    @include('nav')
 
 
 

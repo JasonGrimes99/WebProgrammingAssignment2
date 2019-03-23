@@ -42,7 +42,7 @@ echo '<nav id="side-navbar">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         </form>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Logout</a>
+                            <a class="nav-link" href="">Logout</a>
                         </li>
                     </ul>
                 </div>

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -10,7 +9,6 @@
     <title>Login Screen</title>
 </head>
 <body>
-
 <div class="container-fluid h-100">
     <div class="row justify-content-center align-items-center">
         <a href="/shout"><img src="media/shout_logo.png" width="200px" height="80px"></a>
@@ -20,14 +18,15 @@
     </div>
     <div class="row justify-content-center align-items-center h-100">
         <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <form action=""> <!-- log in php script in action-->
+            <form action="{{URL::to('index')}}" method="POST">
+                {{ csrf_field() }}
                 <div class="form-group">
-                    <p>User Name:</p>
-                    <input type="text" class="form-control" />
+                    <p>Email:</p>
+                    <input type="email" class="form-control" name="input_email"/>
                 </div>
                 <div class="form-group">
                     <p>Password:</p>
-                    <input type="password" class="form-control" />
+                    <input type="password" class="form-control" name="input_password" />
                 </div>
                 <div class="form-group">
                     <div class="container">
@@ -38,9 +37,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <!-- <div class="col"><button class="btn btn-primary" href="../register" >Register</button></div> -->
                     <div class="col"><a class="btn btn-primary" href="register">Register</a></div>
-                    <p>something</p>
                 </div>
 
             </form>
