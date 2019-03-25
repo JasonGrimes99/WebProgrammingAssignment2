@@ -1,8 +1,3 @@
-<?php
-if(empty(session('user'))){
-    return redirect('');
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

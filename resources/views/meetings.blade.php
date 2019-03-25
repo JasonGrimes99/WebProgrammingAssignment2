@@ -1,7 +1,4 @@
 <?php
-if(empty(session('user'))){
-    return redirect('');
-}
 $numOfMeetings = 2;
 
 $students = array();

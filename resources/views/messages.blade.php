@@ -1,8 +1,4 @@
 <?php
-if(empty(session('user'))){
-    return redirect('');
-}
-
 $numOfMessages = 10;
 
 function messageBuilder($name, $date, $content){
