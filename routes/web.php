@@ -12,7 +12,7 @@
 */
 
 Route::get('', function () {
-    return view('index');
+    return view('auth/login');
 })->name('index');
 
 Route::get('profile', function () {
@@ -46,3 +46,7 @@ Route::get('index', 'Controller_login@logout');
 Route::get('test','usersController@index'); //the string to put in to the url, and which controller to go with that view
 
 Route::get('meetings','Controller_db@NameGrabber'); // Getting nameGrabber into meetings view
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
