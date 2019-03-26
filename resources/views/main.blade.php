@@ -11,16 +11,9 @@
 
 <div class="body-container">
 
-    <a href="{{action('Controller_login@logout')}}">logout</a>
 
-    <?php
-        echo session('user');
-    ?>
 
     @include('nav')
-
-
-
 
         <div class="container-fluid" id="recent-messages">
             <div class="row">

@@ -17,6 +17,10 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('/home', 'HomeController@index')->name('home');
 
+    Route::get('home', function () {
+        return view('home');
+    })->name('home');
+
     Route::get('', function () {
         return view('auth/login');
     })->name('index');
@@ -29,9 +33,9 @@ Route::group(['middleware' => 'auth'], function() {
         return view('main');
     })->name('main');
 
-    Route::get('meetings', function () {
-        return view('meetings');
-    })->name('meetings');
+    Route::get('meeting', function () {
+        return view('meeting');
+    })->name('meeting');
 
     Route::get('messages', function () {
         return view('messages');
