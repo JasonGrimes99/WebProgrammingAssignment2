@@ -1,8 +1,3 @@
-<?php
-if(empty(session('user'))){
-    return redirect('');
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +11,9 @@ if(empty(session('user'))){
 
 <div class="body-container">
 
-    <a href="{{action('Controller_login@logout')}}">logout</a>
 
-    <?php
-        echo session('user');
-    ?>
 
     @include('nav')
-
-
-
 
         <div class="container-fluid" id="recent-messages">
             <div class="row">
