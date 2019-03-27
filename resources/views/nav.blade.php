@@ -27,7 +27,7 @@
             <a href="messages">Messages</a>
         </li>
         <li>
-            <a href="meetings">Meetings</a>
+            <a href="meeting">Meetings</a>
         </li>
     </ul>
 </nav>

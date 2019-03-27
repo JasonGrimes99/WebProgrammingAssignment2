@@ -41,9 +41,9 @@ Route::group(['middleware' => 'auth'], function() {
         return view('messages');
     })->name('messages');
 
-    Route::get('test', function () {
-        return view('test');
-    })->name('test');
+    Route::get('createMeeting', function () {
+        return view('layouts/createMeeting');
+    })->name('createMeeting');
 
 });
 
