@@ -43,6 +43,7 @@ function meetingBuilder($name, $date, $content){
         <div class="container-fluid" id="meetings">
             <div class="row">
                 <div class="col">
+                    <a href="">New Meeting</a>
                     <h1>Meetings</h1>
                 </div>
             </div>
@@ -60,7 +61,7 @@ function meetingBuilder($name, $date, $content){
             <div>
                 @foreach($studentName as $student)
                     <?php
-                    $students[$counter] = $student->First_Name;
+                    $students[$counter] = $student->name;
                     $counter++;
                     ?>
                 @endforeach

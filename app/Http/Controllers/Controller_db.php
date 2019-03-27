@@ -9,8 +9,8 @@ class Controller_db extends Controller
 {
     function NameGrabber()
     {
-        $studentName = DB::select('SELECT * from student_table');
-        return view('meetings', ['studentName' => $studentName]);
+        $studentName = DB::select('SELECT * from users');
+        return view('meeting', ['studentName' => $studentName]);
     }
 
 }
