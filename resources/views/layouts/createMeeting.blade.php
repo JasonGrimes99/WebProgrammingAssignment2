@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../bootstrap/theme.css">
 </head>
 <div class="w3-container">
-    <button onclick="document.getElementById('id01').style.display='block'">New meeting</button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary">New meeting</button>
     <div id="id01" class="w3-modal">
         <div class="w3-modal-content">
             <div class="w3-container">
@@ -13,36 +13,26 @@
                 <form name="meet_form" method="post" action="{{action('Controller_createMeeting@create')}}">
                     {{ csrf_field() }}
 
-                    <input  type="text">
-
-
-                    <label>Location:</label>
-                    <input name="meet_location" type="text">
-
-
-                    <label>Meeting time:</label>
-                    <input name="meet_time" type="time">
-
-                    <label>Meeting date:</label>
-                    <input name="meet_date" type="date">
-
-
-                    <button name="meet_submit" type="submit">Submit</button>
-                </form>
-
-                <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Who would you like to have a meeting with?</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="meet_to">
+                        <label>Who would you like to have a meeting with?</label>
+                        <input type="text" class="form-control" name="meet_to">
                     </div>
+
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label>Location:</label>
+                        <input type="text" class="form-control" name="meet_location">
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+                    <div class="form-group">
+                        <label>Meeting time:</label>
+                        <input type="time" class="form-control" name="meet_time">
                     </div>
+
+                    <div class="form-group">
+                        <label>Meeting date:</label>
+                        <input type="date" class="form-control" name="meet_date">
+                    </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
