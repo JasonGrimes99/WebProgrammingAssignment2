@@ -1,8 +1,3 @@
-<?php
-if(empty(session('user'))){
-    return redirect('');
-}
-?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -18,8 +13,6 @@ if(empty(session('user'))){
 <div class="body-container">
 
     @include('nav')
-
-
 
         <div class="container" id="about-user">
             <div class="row">
