@@ -16,9 +16,10 @@ class Controller_createMeeting extends Controller
         $to = $request->input('meet_to');
         $location = $request->input('meet_location');
         $time = $request->input('meet_time');
-        //$date = $request->input('meet_date');
+        $date = $request->input('meet_date');
+        $date = date('Y-m-d');
 
-        DB::insert("INSERT INTO meetings (meet_from, meet_to, meet_location, meet_time, meet_date) VALUES ( '$from' , '$to', '$location', '$time', '2019/02/02')");
+        DB::insert("INSERT INTO meetings (meet_from, meet_to, meet_location, meet_time, meet_date) VALUES ( '$from' , '$to', '$location', '$time', '$date')");
         return redirect('meeting');
     }
 

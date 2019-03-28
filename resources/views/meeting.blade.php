@@ -44,7 +44,7 @@ function meetingBuilder($name, $date, $content){
         <div class="container-fluid" id="meetings">
             <div class="row">
                 <div class="col">
-                    <!-- -->
+                    <!-- modal for creation of new meetings -->
 
                     <div class="w3-container">
                         <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary">New meeting</button>

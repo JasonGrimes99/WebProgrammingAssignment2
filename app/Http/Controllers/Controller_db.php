@@ -13,4 +13,8 @@ class Controller_db extends Controller
         return view('meeting', ['studentName' => $studentName]);
     }
 
+    function dataGrabber(){
+
+    }
+
 }
