@@ -17,7 +17,8 @@ class Controller_db extends Controller
     function getMeetings(){
         $user = Auth::id();
         $meetingResults = DB::table('users')->join('meetings', 'users.id', '=', 'meetings.meet_to')->select('name', 'meet_location', 'meet_time', 'meet_date')->get();
-        return view('meeting', ['meetingResults' => $meetingResults]);
+        $names = DB::table('users')->select('name', 'id')->get();
+        return view ('meeting', ['meetingResults' => $meetingResults, 'names' => $names]);
     }
 
 }
