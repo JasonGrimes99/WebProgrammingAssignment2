@@ -27,7 +27,11 @@
                                     {{ csrf_field() }}
                                     <div class="form-group">
                                         <label>Who would you like to have a meeting with?</label>
-                                        <input type="text" class="form-control" name="meet_to">
+                                        <select class="form-control" name="meet_to">
+                                            @foreach($names as $value)
+                                            <option value="{{$value -> id}}">{{$value -> name}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
 
                                     <div class="form-group">
@@ -69,7 +73,6 @@
             <!-- -->
         @foreach($meetingResults as $result)
                 <div class='row'>
-
                     <div class='col'>
                         <a href='#'>{{ $result->name }}</a>
                     </div>
@@ -81,7 +84,6 @@
                     <div class='col'>
                         <p>{{$result->meet_time}} {{$result->meet_date}}</p>
                     </div>
-
                 </div>
         @endforeach
         <!-- -->
