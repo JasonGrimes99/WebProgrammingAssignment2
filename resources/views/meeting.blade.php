@@ -1,31 +1,4 @@
-<?php
-$numOfMeetings = 2;
-
-$students = array();
-$counter = 0;
-
-function meetingBuilder($name, $date, $content){
-    echo "
-<div class='row'>
-
-    <div class='col'>
-        <a href='#'>$name</a>
-    </div>
-
-    <div class='col'>
-        <p>$content</p>
-    </div>
-
-    <div class='col'>
-        <p>$date</p>
-    </div>
-
-</div>
-";
-}
-?>
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -36,81 +9,85 @@ function meetingBuilder($name, $date, $content){
     <title>Main Page</title>
 </head>
 <body>
-
 <div class="body-container">
 
     @include('nav')
 
-        <div class="container-fluid" id="meetings">
-            <div class="row">
-                <div class="col">
-                    <!-- modal for creation of new meetings -->
+    <div class="container-fluid" id="meetings">
+        <div class="row">
+            <div class="col">
+                <!-- modal for creation of new meetings -->
+                <div class="w3-container">
+                    <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary">New meeting</button>
+                    <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content">
+                            <div class="w3-container">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                <form name="meet_form" method="post" action="{{action('Controller_createMeeting@create')}}">
+                                    {{ csrf_field() }}
+                                    <div class="form-group">
+                                        <label>Who would you like to have a meeting with?</label>
+                                        <input type="text" class="form-control" name="meet_to">
+                                    </div>
 
-                    <div class="w3-container">
-                        <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary">New meeting</button>
-                        <div id="id01" class="w3-modal">
-                            <div class="w3-modal-content">
-                                <div class="w3-container">
-                                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                                    <form name="meet_form" method="post" action="{{action('Controller_createMeeting@create')}}">
-                                        {{ csrf_field() }}
+                                    <div class="form-group">
+                                        <label>Location:</label>
+                                        <input type="text" class="form-control" name="meet_location">
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label>Who would you like to have a meeting with?</label>
-                                            <input type="text" class="form-control" name="meet_to">
-                                        </div>
+                                    <div class="form-group">
+                                        <label>Meeting time:</label>
+                                        <input type="time" class="form-control" name="meet_time">
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label>Location:</label>
-                                            <input type="text" class="form-control" name="meet_location">
-                                        </div>
+                                    <div class="form-group">
+                                        <label>Meeting date:</label>
+                                        <input type="date" class="form-control" name="meet_date">
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label>Meeting time:</label>
-                                            <input type="time" class="form-control" name="meet_time">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Meeting date:</label>
-                                            <input type="date" class="form-control" name="meet_date">
-                                        </div>
-
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-                                </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
                             </div>
                         </div>
                     </div>
-
-                    <!-- -->
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Meeting Name</h2>
-                </div>
-                <div class="col">
-                    <h2>Date and Time</h2>
-                </div>
-                <div class="col">
-                    <h2>Who With</h2>
-                </div>
-            </div>
-            <div>
-                @foreach($studentName as $student)
-                    <?php
-                    $students[$counter] = $student->name;
-                    $counter++;
-                    ?>
-                @endforeach
-                    <?php
-                    for($i=0; $i <= $numOfMeetings; $i++){
-                        meetingBuilder($students[$i], "27/10/2016 15:00:00", "Meeting at $i:00, See STUDENT_PROFILE");
-                    }
-                    ?>
+                <!-- -->
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <h2>Meeting with:</h2>
+            </div>
+            <div class="col">
+                <h2>Meeting location:</h2>
+            </div>
+            <div class="col">
+                <h2>Date and time</h2>
+            </div>
+        </div>
+        <div>
+            <!-- -->
+        @foreach($meetingResults as $result)
+                <div class='row'>
+
+                    <div class='col'>
+                        <a href='#'>{{ $result->meet_to }}</a>
+                    </div>
+
+                    <div class='col'>
+                        <p>{{ $result->meet_location }}</p>
+                    </div>
+
+                    <div class='col'>
+                        <p>{{$result->meet_time}} {{$result->meet_date}}</p>
+                    </div>
+
+                </div>
+        @endforeach
+        <!-- -->
+        </div>
     </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
