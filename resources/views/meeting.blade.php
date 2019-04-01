@@ -71,7 +71,7 @@
                 <div class='row'>
 
                     <div class='col'>
-                        <a href='#'>{{ $result->meet_to }}</a>
+                        <a href='#'>{{ $result->name }}</a>
                     </div>
 
                     <div class='col'>
