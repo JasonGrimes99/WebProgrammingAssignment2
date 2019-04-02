@@ -20,7 +20,20 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('role');
         });
+
+        //make a table for meetings
+        Schema::create('meetings', function (Blueprint $table) {
+            $table->increments('meet_id');
+            $table->integer('meet_from');
+            $table->integer('meet_to');
+            $table->string('meet_location');
+            $table->time('meet_time');
+            $table->date('meet_date');
+        });
+
+        //make a table for messages
     }
 
     /**
