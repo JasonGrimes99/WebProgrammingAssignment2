@@ -49,11 +49,18 @@ Route::group(['middleware' => 'auth'], function() {
         return view('layouts/createMeeting');
     })->name('createMeeting');
 
+    Route::get('New_message', function() {
+     return view( 'New_message');
+    })->name('New_message');
+
+    //Route::get('New_message', 'Controller_Newmessage@Allusers');
+
+    Route::get('New_message', 'Controller_Newmessage@Newmessagedata');
+
+    Route::post('createMeeting', 'Controller_createMeeting@create');
+
     Route::post('meeting', 'Controller_createMeeting@create');
 
     Route::get('meeting','Controller_db@getMeetings'); // Getting nameGrabber into meetings view
 
 });
-
-
-
