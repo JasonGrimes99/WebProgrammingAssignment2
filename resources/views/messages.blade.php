@@ -18,6 +18,9 @@ function messageBuilder($name, $date, $content){
         <p>$date</p>
     </div>
 
+    <div class = 'col'>
+
+    </div>
 </div>
 ";
 }
@@ -54,6 +57,7 @@ function messageBuilder($name, $date, $content){
                 </div>
                 <div class="col">
                     <h2>Received</h2>
+                   <a href="New_message">Send a new message</a>
                 </div>
             </div>
         </div>
